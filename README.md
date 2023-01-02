@@ -12,7 +12,7 @@ A simple artificial neural network from scratch using python.
 
 ### Installation
 
-- Clone the project from [GITLINK](https://github.com/khritish17/GARGi-A-perceptron-based-neural-network)
+- Clone the project from [GITLINK](https://github.com/khritish17/GARGi-Network.git)
 
 ### Contact
 
