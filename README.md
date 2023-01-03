@@ -85,3 +85,33 @@ Sample Output ( same result may not be expected ):
 - **key** = 2: Layer 3 (Output layer), **value** = bias vector of dimension 3 x 1 (3 nodes)
 
 
+## forward_propagation(*weight*, *bias*, *input*, *activation_func*) | return type: Numpy array
+
+The input array/list is passed to the forward_propagation() function along with the weight and bias retrieved using get_parameters() function. An optional parameter for activation function is provided, by default the activation function is set to **SIGMOID** activation function, it can also be set to **RELU** and **STEP** activation function.
+
+    import gargi_network as nn
+    weight, bias = nn.get_parameters()
+    op = nn.forward_propagation(w, b, [1, 2])
+    print(op)
+For input:
+    
+    [1, 2]
+Output:
+    
+    [0.44384968 0.27767789]
+> **Note**
+> The output will not necessarily will match with any of yours run, but the dimension should match the output dimension provided at the build_network() function
+
+To set activation function as **SIGMOID**
+
+    op = nn.forward_propagation(w, b, [1, 2])
+or 
+
+    op = nn.forward_propagation(w, b, [1, 2], 'sigmoid')
+To set activation function as **RELU**
+
+    op = nn.forward_propagation(w, b, [1, 2], 'relu')
+
+To set activation function as **STEP**
+
+    op = nn.forward_propagation(w, b, [1, 2], 'step')
