@@ -17,6 +17,8 @@ def get_parameters():
 def forward_propagation(weight, bias, input_, activation_func = 'sigmoid'):
     FP = fp.Forward_Propagation(weight, bias, input_, activation_function = activation_func)
     OP = FP.forward_propagation()
-    return OP
+    layer_out = FP.layer_output()
+    return OP, layer_out
+
 
     

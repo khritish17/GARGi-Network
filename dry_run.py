@@ -5,5 +5,7 @@ w, b = nn.get_parameters()
 # print(w)
 # print("Bias")
 # print(b)
-op = nn.forward_propagation(w, b, [1, 2], 'sigmoid')
+op, layer_out = nn.forward_propagation(w, b, [1, 2], 'sigmoid')
+
+print(layer_out)
 print(op)

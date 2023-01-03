@@ -6,7 +6,7 @@ class Forward_Propagation:
         self.bias = bias
         self.input_ = input_
         self.activation_function = activation_function
-        self.interface_out = {}
+        self.layer_out = {}
         # self.forward_propagation()
 
     def weighted_input(self, input_, weight_matrix):
@@ -31,15 +31,17 @@ class Forward_Propagation:
             input_[i] = self.activation(input_[i] + bias[i], activation_function=self.activation_function) 
         return input_
     
-    def interface_output(self):
-        pass
+    def layer_output(self):
+        return self.layer_out
 
     def forward_propagation(self):
-        OP = self.input_
+        OP = np.array(self.input_)
+        self.layer_out[0] = OP
         # perform the weighted input 
         for interface, weight in self.weight.items():
             OP = self.weighted_input(OP, weight)
             # OP = self.bias[interface + 1] + OP
             OP = self.bias_activation(self.bias[interface + 1], OP)
+            self.layer_out[interface + 1] = OP
         # print(OP)
         return OP
