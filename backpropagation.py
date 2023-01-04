@@ -2,14 +2,14 @@ import numpy as np
 import forward_propagation as fp 
 
 class Backpropagation:
-    def __init__(self, weight, bias, input_, target_, activation_function = 'sigmoid') -> None:
+    def __init__(self, weight, bias, input_, target_, activation_function = 'sigmoid', learning_rate = 0.001) -> None:
         self.weight = weight
         self.bias = bias
         self.input_ = np.array(input_)
         self.target_ = np.array(target_)
         self.activation_function = activation_function
         self.layer_out = None
-        self.learning_rate = 0.001
+        self.learning_rate = learning_rate
         self.forward_propagation()
     
     def forward_propagation(self):
