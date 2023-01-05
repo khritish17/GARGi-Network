@@ -1,7 +1,34 @@
 import numpy as np 
 import forward_propagation as fp 
+import getParameters as param
 
-class Backpropagation:
+class Backpropagation():
+
+    def __init__(self, input_matrix, target_matrix, weight, bias, activation_function = 'sigmoid', learning_rate = 0.001) -> None:
+        self.weight = weight
+        self.bias = bias
+        self.input_matrix = np.array(input_matrix)
+        self.target_matrix = np.array(target_matrix)
+        self.activation_function = activation_function
+        self.learning_rate = learning_rate
+        if self.input_matrix.shape[0] != self.target_matrix.shape[0]:
+            print("Error [Dimension mismatch]: I/P matrix of shape ({}, ?), Target matrix of shape ({}, ?)".format(self.input_matrix.shape[0],self.target_matrix.shape[0]))
+            exit()
+        # self.get_parameters()
+        self.backpropagate()
+    
+    def return_parameters(self):
+        return self.weight, self.bias
+    
+    def backpropagate(self):
+        for i, inp_row in enumerate(self.input_matrix):
+            BCKP = Backpropagation_internal(self.weight, self.bias, inp_row, self.target_matrix[i], 'sigmoid', self.learning_rate)
+            self.weight, self.bias = BCKP.new_parameters()
+    
+    
+
+
+class Backpropagation_internal:
     def __init__(self, weight, bias, input_, target_, activation_function = 'sigmoid', learning_rate = 0.001) -> None:
         self.weight = weight
         self.bias = bias
