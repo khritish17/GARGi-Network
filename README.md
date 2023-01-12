@@ -1,6 +1,8 @@
 # GARGi-Network
 Official Documentation of the GARGi Network
 
+> **Note** The project is currently active, there may be some updates where old API may be changed according to the requirement. Hence always look out for updates. Onces the project gets finalized this NOTE will be removed.
+
 ### Description:
 
 A simple artificial neural network from scratch using python. 
