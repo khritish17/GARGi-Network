@@ -1,5 +1,5 @@
-# GARGi-Network
-Official Documentation of the GARGi Network
+# GARGI-Network
+Official Documentation of the GARGI Network
 
 > **Note** The project is currently active, there may be some updates where old API may be changed according to the requirement. Hence always look out for updates. Onces the project gets finalized this NOTE will be removed.
 
