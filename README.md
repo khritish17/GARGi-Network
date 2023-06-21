@@ -110,10 +110,12 @@ To set the activation function as **SIGMOID**
 or 
 
     op = nn.forward_propagation(w, b, [1, 2], 'sigmoid')
-To set activation function as **RELU**
+To set the activation function as **RELU**
 
     op = nn.forward_propagation(w, b, [1, 2], 'relu')
 
-To set activation function as **STEP**
+To set the activation function as **STEP**
 
     op = nn.forward_propagation(w, b, [1, 2], 'step')
+## back_propagation(*input_matrix*, *target_matrix*, *weight*, *bias*, *activation_function*, *learning_rate*) | return type: tuple(List[List[]], List[List[]])
+The input matrix along with the target matrix, weight, bias,  activation function and learning rate is passed to the back_propagation() function. The activation function and the learning rate are optional parameters that have the default value of **sigmoid** and **0.001** respectively.
