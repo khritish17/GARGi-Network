@@ -1,16 +1,16 @@
 # GARGI-Network
 Official Documentation of the GARGI Network
 
-> **Note** The project is currently active, there may be some updates where old API may be changed according to the requirement. Hence always look out for updates. Onces the project gets finalized this NOTE will be removed.
+> **Note** The project is currently active, there may be some updates where the old API may be changed according to the requirement. Hence always look out for updates. Once the project gets finalized this NOTE will be removed.
 
 ### Description:
 
-A simple artificial neural network from scratch using python. 
+A simple artificial neural network from scratch using Python. 
 
 ### Prerequisites
 
-- Install latest version of python, make sure to install the PIP pipeline 
-- Install numpy library
+- Install the latest version of Python, make sure to install the PIP pipeline 
+- Install Numpy library
 
 ### Installation
 
@@ -30,7 +30,7 @@ Email:
 
 Creates the neural network according to the specifications provided by the architecture. It generates the weight matrix and bias vectors. The weight matrix and the bias vector are saved in the weights.csv and bias.csv . 
 
-The architecture is a list of no. of nodes at each layer starting from input layer     (0 index) to output layer ( n - 1 index); where n is the length of architecture 
+The architecture is a list of no. of nodes at each layer starting from the input layer     (0 index) to the output layer ( n - 1 index); where n is the length of the architecture 
 
 **e.g.**
 
@@ -42,7 +42,7 @@ The architecture is a list of no. of nodes at each layer starting from input lay
 > - Output layer: 		5 nodes 
 
 > **Warning**
-> This function should be called once at the starting of your project, repetitive calling will rewrite the weights.csv and bias.csv file thereby losing the previously computed weights and bias. It’s a better practice to keep this function in a separate file in your project, which will be executed only once till the end of the project.
+> This function should be called once at the start of your project, repetitive calling will rewrite the weights.csv and bias.csv file thereby losing the previously computed weights and bias. It’s a better practice to keep this function in a separate file in your project, which will be executed only once till the end of the project.
 
 **e.g.**
 
@@ -66,7 +66,7 @@ For bias dictionary: keys are the layer of the network and values are the bias v
     print(bias_vector)
 
 
-Sample Output ( same result may not be expected ):
+Sample Output (the same result may not be expected ):
 
 **weight_dictionary**:
 
@@ -102,9 +102,9 @@ Output:
     
     [0.44384968 0.27767789]
 > **Note**
-> The output will not necessarily will match with any of yours run, but the dimension should match the output dimension provided at the build_network() function
+> The output will not necessarily match with any of your run, but the dimension should match the output dimension provided at the build_network() function
 
-To set activation function as **SIGMOID**
+To set the activation function as **SIGMOID**
 
     op = nn.forward_propagation(w, b, [1, 2])
 or 
